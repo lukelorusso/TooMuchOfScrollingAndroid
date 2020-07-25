@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TooMuchOfScrolling</string>
+    <string name="base10">Base-10</string>
+    <string name="binary">Binary</string>
+    <string name="hexadecimal">Hexadecimal</string>
+    <string name="bind">Bind</string>
+    <string name="unbind">Un-bind</string>
+</resources>
