@@ -100,8 +100,8 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         base10Listener = base10RecyclerView
             .bindScrollTo(binaryRecyclerView, hexadecimalRecyclerView)
-        binaryListener = binaryRecyclerView
 
+        binaryListener = binaryRecyclerView
             .bindScrollTo(base10RecyclerView, hexadecimalRecyclerView)
 
         hexadecimalListener = hexadecimalRecyclerView
