@@ -78,7 +78,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/activate"
+                android:id="@+id/bindButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/bind"
@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content" />
 
             <Button
-                android:id="@+id/deactivate"
+                android:id="@+id/unbindButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/unbind"

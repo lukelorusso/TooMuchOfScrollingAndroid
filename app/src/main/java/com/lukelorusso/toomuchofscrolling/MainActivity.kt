@@ -90,13 +90,13 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         hexadecimalRecyclerView.adapter = hexadecimalAdapter.apply { data = hexadecimalList }
 
         bind()
-        activate?.setOnClickListener { bind() }
-        deactivate?.setOnClickListener { unbind() }
+        bindButton?.setOnClickListener { bind() }
+        unbindButton?.setOnClickListener { unbind() }
     }
 
     private fun bind() {
-        activate?.isEnabled = false
-        deactivate?.isEnabled = false
+        bindButton?.isEnabled = false
+        unbindButton?.isEnabled = false
 
         base10Listener = base10RecyclerView
             .bindScrollTo(binaryRecyclerView, hexadecimalRecyclerView)
@@ -107,13 +107,13 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         hexadecimalListener = hexadecimalRecyclerView
             .bindScrollTo(base10RecyclerView, binaryRecyclerView)
 
-        activate?.isEnabled = true
-        deactivate?.isEnabled = true
+        bindButton?.isEnabled = false
+        unbindButton?.isEnabled = true
     }
 
     private fun unbind() {
-        activate?.isEnabled = false
-        deactivate?.isEnabled = false
+        bindButton?.isEnabled = false
+        unbindButton?.isEnabled = false
 
         base10Listener?.also { listener ->
             base10RecyclerView.removeOnScrollListener(listener)
@@ -127,8 +127,8 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             hexadecimalRecyclerView.removeOnScrollListener(listener)
         }
 
-        activate?.isEnabled = true
-        deactivate?.isEnabled = true
+        bindButton?.isEnabled = true
+        unbindButton?.isEnabled = false
     }
 
 }
